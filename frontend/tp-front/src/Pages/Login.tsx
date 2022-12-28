@@ -1,9 +1,11 @@
 import React from 'react';
-import { Breadcrumb, Layout, Menu, theme } from 'antd';
+import { Breadcrumb, Layout, Menu, Space, theme } from 'antd';
 import HeaderMe from '../Components/Header';
 import FooterMe from '../Components/Footer';
 import { Button, Checkbox, Form, Input } from 'antd';
+import { Typography } from 'antd';
 
+const { Text, Link } = Typography;
 
 const { Header, Content, Footer } = Layout;
 
@@ -49,19 +51,23 @@ const LoginMe: React.FC = () => {
                         <Input.Password />
                     </Form.Item>
 
-                    <Form.Item name="remember" valuePropName="checked" wrapperCol={{ offset: 8, span: 16 }}>
-                        <Checkbox>Remember me</Checkbox>
-                    </Form.Item>
-
                     <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-                        <Button type="primary" htmlType="submit">
+                        <Button type="primary" htmlType="submit" style={{backgroundColor:'#090850',display: 'flex', justifyContent: 'center'}}>
                             Submit
                         </Button>
                     </Form.Item>
                 </Form>
             </Content>
+            <Space direction='vertical'>
+                        <Text>Don't you have an account?<Link href="https://ant.design" target="_blank">SignUp</Link></Text>
+            </Space>
+            <Space direction='vertical'>
+                        <Link href="https://ant.design" target="_blank">Forgot Password?</Link>
+            </Space>
+            
+                
             <div style={{
-                marginTop:117,
+                marginTop:129,
                 
             }}><FooterMe /></div>
 
