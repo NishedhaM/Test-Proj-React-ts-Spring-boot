@@ -1,10 +1,9 @@
 import React from 'react';
-import { UploadOutlined, UserOutlined, VideoCameraOutlined } from '@ant-design/icons';
 import { Layout, Menu, theme } from 'antd';
 import SNLogo from "../Assets/logo.png";
-import Home from "../Assets/icons8-home-50 3.png";
+import { HomeOutlined, PhoneOutlined, InfoCircleOutlined } from '@ant-design/icons';
 
-const { Header, Content, Footer, Sider } = Layout;
+const { Content, Sider } = Layout;
 
 const Sidebar: React.FC = () => {
     const {
@@ -21,22 +20,29 @@ const Sidebar: React.FC = () => {
                 }}
                 onCollapse={(collapsed, type) => {
                     console.log(collapsed, type);
-                }}
-            >
-                <div className="logo" />
-                < img style={{marginTop:5}} src={SNLogo} alt="Image" />
+                }}>
+                < img style={{ marginTop: 5 }} src={SNLogo} alt="logo" />
                 <Menu
-                    style={{marginTop:'40px'}}
+                    style={{ marginTop: '40px' }}
                     theme="dark"
                     mode="inline"
                     defaultSelectedKeys={['1']}>
-                    <div style={{borderTop:'1px solid #FFFFFF'}}><Menu.Item  key="1" >< img src={Home} alt="Image" />  Home</Menu.Item></div>
-                    <div style={{borderTop:'1px solid #FFFFFF'}}><Menu.Item  key="2" >< img src={Home} alt="Image" />  About</Menu.Item></div>
-                    <div style={{borderTop:'1px solid #FFFFFF',borderBottom:'1px solid #FFFFFF'}}><Menu.Item  key="3" >< img style={{marginLeft:3}} src={Home} alt="Image" />  Contact</Menu.Item></div>
+                        <div style={{ 
+                            borderTop: '1px solid #FFFFFF' }}>
+                            <Menu.Item key="1" ><HomeOutlined />  Home</Menu.Item>
+                        </div>
+                        <div style={{
+                            borderTop: '1px solid #FFFFFF'}}>
+                            <Menu.Item key="2" ><InfoCircleOutlined />  About</Menu.Item>
+                        </div>
+                        <div style={{
+                            borderTop: '1px solid #FFFFFF',
+                            borderBottom: '1px solid #FFFFFF'}}>
+                            <Menu.Item key="3" ><PhoneOutlined />  Contact</Menu.Item>
+                        </div>
                 </Menu>
             </Sider>
             <Layout>
-
                 <Content style={{ margin: '24px 16px 0' }}>
                     <div style={{ padding: 24, minHeight: 503, background: colorBgContainer }}>content</div>
                 </Content>

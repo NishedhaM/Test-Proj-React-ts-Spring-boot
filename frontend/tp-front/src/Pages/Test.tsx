@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import {
-    HomeOutlined,
     UserOutlined,
 } from '@ant-design/icons';
-import { Breadcrumb, Layout, Menu, theme, Button, Checkbox, Form, Input, Typography, Col, Row } from 'antd';
+import { Breadcrumb, Layout, Menu, theme, Button, Checkbox, Form, Input, Typography } from 'antd';
 
 const { Header, Content, Footer, Sider } = Layout;
 const { Title } = Typography;

@@ -1,13 +1,13 @@
 import React from 'react';
-import { Breadcrumb, Layout, Menu, Space, theme } from 'antd';
+import { Layout, Space } from 'antd';
 import HeaderMe from '../Components/Header';
 import FooterMe from '../Components/Footer';
-import { Button, Checkbox, Form, Input } from 'antd';
+import { Button, Form, Input } from 'antd';
 import { Typography } from 'antd';
 
-const { Text, Link } = Typography;
+const { Text, Link,Title } = Typography;
 
-const { Header, Content, Footer } = Layout;
+const { Content } = Layout;
 
 const LoginMe: React.FC = () => {
     const onFinish = (values: any) => {
@@ -17,14 +17,11 @@ const LoginMe: React.FC = () => {
     const onFinishFailed = (errorInfo: any) => {
         console.log('Failed:', errorInfo);
     };
-    const {
-        token: { colorBgContainer },
-    } = theme.useToken();
 
     return (
         <Layout>
             <HeaderMe />
-            <h1 style={{ marginTop: 100, display: 'flex', justifyContent: 'center', fontFamily: 'cursive' }}>Login Form</h1>
+            <Title style={{ marginTop: 100, display: 'flex', justifyContent: 'center', fontFamily: 'cursive' }}>Login Form</Title>
             <Content className="site-layout" style={{ padding: '0 50px', display: 'flex', justifyContent: 'center', marginTop: 40 }}>
                 <Form
                     name="basic"
@@ -42,7 +39,6 @@ const LoginMe: React.FC = () => {
                     >
                         <Input />
                     </Form.Item>
-
                     <Form.Item
                         label="Password"
                         name="password"
@@ -50,9 +46,8 @@ const LoginMe: React.FC = () => {
                     >
                         <Input.Password />
                     </Form.Item>
-
                     <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-                        <Button 
+                        <Button
                             type="primary"
                             htmlType="submit"
                             style={{
@@ -71,13 +66,11 @@ const LoginMe: React.FC = () => {
             <Space direction='vertical'>
                 <Link href="https://ant.design" target="_blank">Forgot Password?</Link>
             </Space>
-
-
             <div style={{
-                marginTop: 129,
-
-            }}><FooterMe /></div>
-
+                marginTop: 110,
+            }}>
+                <FooterMe />
+            </div>
         </Layout>
     );
 };

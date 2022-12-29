@@ -1,0 +1,9 @@
+space
+unused
+h1
+long style
+
+git branch deployments
+	git branch - show branches
+	git branch -c enhancement/SN1 - create another branch
+	git checkout enhancement/SN1 - switch to new branch

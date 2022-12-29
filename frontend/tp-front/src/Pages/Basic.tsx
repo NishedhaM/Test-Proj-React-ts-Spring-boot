@@ -4,7 +4,7 @@ import FooterDown from "../Components/Footer";
 
 const Basic = () =>{
   return (
-          <div className="App">
+          <div>
             <Header/>
             <Sidebar/>
             <FooterDown/>

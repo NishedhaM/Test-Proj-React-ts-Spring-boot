@@ -7,7 +7,7 @@ import { Typography } from 'antd';
 
 const { Text, Link } = Typography;
 
-const {  Content } = Layout;
+const { Content } = Layout;
 
 const RegisterMe: React.FC = () => {
     const onFinish = (values: any) => {
@@ -42,7 +42,6 @@ const RegisterMe: React.FC = () => {
                     >
                         <Input />
                     </Form.Item>
-
                     <Form.Item
                         label="Password"
                         name="password"
@@ -50,8 +49,6 @@ const RegisterMe: React.FC = () => {
                     >
                         <Input.Password />
                     </Form.Item>
-
-
                     <Form.Item
                         label="ConfirmPassword"
                         name="ConfirmPassword"
@@ -59,23 +56,20 @@ const RegisterMe: React.FC = () => {
                     >
                         <Input.Password />
                     </Form.Item>
-
                     <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-                        <Button type="primary" htmlType="submit" style={{backgroundColor:'#090850',display: 'flex', justifyContent: 'center'}}>
+                        <Button type="primary" htmlType="submit" style={{ backgroundColor: '#090850', display: 'flex', justifyContent: 'center' }}>
                             Register
                         </Button>
                     </Form.Item>
                 </Form>
             </Content>
             <Space direction='vertical'>
-                        <Text>Already have an account?<Link href="https://ant.design" target="_blank">Login</Link></Text>
+                <Text>Already have an account?<Link href="https://ant.design" target="_blank">Login</Link></Text>
             </Space>
-            
             <div style={{
-                marginTop:129,
-                
-            }}><FooterMe /></div>
-
+                marginTop: 129,
+            }}><FooterMe />
+            </div>
         </Layout>
     );
 };
