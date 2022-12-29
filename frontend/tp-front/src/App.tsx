@@ -1,7 +1,5 @@
 import './App.css';
 import LoginMe from './Pages/Login';
-// import RegisterMe from './Pages/Register';
-// import Welcome from './Pages/Welcome';
 import Basic from './Pages/Basic';
 
 function App() {
@@ -10,9 +8,7 @@ function App() {
         {/* <Basic/> */}
         <LoginMe/>
         {/* <RegisterMe/> */}
-        {/* <Welcome/> */}
-
-    </div>
+        {/* <Welcome/> */}</div>
   );
 }
 
