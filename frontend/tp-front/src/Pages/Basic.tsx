@@ -4,11 +4,11 @@ import FooterDown from "../Components/Footer";
 
 const Basic = () =>{
   return (
-          <div>
+          <>
             <Header/>
             <Sidebar/>
             <FooterDown/>
-          </div>
+          </>
       );
 }
 
