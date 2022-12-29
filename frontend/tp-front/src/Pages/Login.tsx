@@ -52,23 +52,30 @@ const LoginMe: React.FC = () => {
                     </Form.Item>
 
                     <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-                        <Button type="primary" htmlType="submit" style={{backgroundColor:'#090850',display: 'flex', justifyContent: 'center'}}>
+                        <Button 
+                            type="primary"
+                            htmlType="submit"
+                            style={{
+                                backgroundColor: '#090850',
+                                display: 'flex',
+                                justifyContent: 'center'
+                            }}>
                             Submit
                         </Button>
                     </Form.Item>
                 </Form>
             </Content>
             <Space direction='vertical'>
-                        <Text>Don't you have an account?<Link href="https://ant.design" target="_blank">SignUp</Link></Text>
+                <Text>Don't you have an account?<Link href="https://ant.design" target="_blank">SignUp</Link></Text>
             </Space>
             <Space direction='vertical'>
-                        <Link href="https://ant.design" target="_blank">Forgot Password?</Link>
+                <Link href="https://ant.design" target="_blank">Forgot Password?</Link>
             </Space>
-            
-                
+
+
             <div style={{
-                marginTop:129,
-                
+                marginTop: 129,
+
             }}><FooterMe /></div>
 
         </Layout>

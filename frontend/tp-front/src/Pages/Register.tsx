@@ -1,13 +1,13 @@
 import React from 'react';
-import { Breadcrumb, Layout, Menu, Space, theme } from 'antd';
+import { Layout, Space } from 'antd';
 import HeaderMe from '../Components/Header';
 import FooterMe from '../Components/Footer';
-import { Button, Checkbox, Form, Input } from 'antd';
+import { Button, Form, Input } from 'antd';
 import { Typography } from 'antd';
 
 const { Text, Link } = Typography;
 
-const { Header, Content, Footer } = Layout;
+const {  Content } = Layout;
 
 const RegisterMe: React.FC = () => {
     const onFinish = (values: any) => {
@@ -17,9 +17,9 @@ const RegisterMe: React.FC = () => {
     const onFinishFailed = (errorInfo: any) => {
         console.log('Failed:', errorInfo);
     };
-    const {
-        token: { colorBgContainer },
-    } = theme.useToken();
+    // const {
+    //     token: { colorBgContainer },
+    // } = theme.useToken();
 
     return (
         <Layout>

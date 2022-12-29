@@ -6,7 +6,7 @@ const Basic = () =>{
   return (
           <div className="App">
             <Header/>
-              <div><Sidebar/></div>
+            <Sidebar/>
             <FooterDown/>
           </div>
       );
