@@ -5,7 +5,7 @@ import FooterMe from '../Components/Footer';
 import { Button, Form, Input } from 'antd';
 import { Typography } from 'antd';
 
-const { Text, Link } = Typography;
+const { Text, Link, Title } = Typography;
 
 const { Content } = Layout;
 
@@ -17,15 +17,29 @@ const RegisterMe: React.FC = () => {
     const onFinishFailed = (errorInfo: any) => {
         console.log('Failed:', errorInfo);
     };
-    // const {
-    //     token: { colorBgContainer },
-    // } = theme.useToken();
 
     return (
         <Layout>
             <HeaderMe />
-            <h1 style={{ marginTop: 100, display: 'flex', justifyContent: 'center', fontFamily: 'cursive' }}>Registration Form</h1>
-            <Content className="site-layout" style={{ padding: '0 50px', display: 'flex', justifyContent: 'center', marginTop: 40 }}>
+            <Title
+                style={{
+                    marginTop: 100,
+                    display: 'flex',
+                    justifyContent: 'center',
+                    fontFamily: 'cursive'
+                }}
+            >
+                Registration Form
+            </Title>
+            <Content
+                className="site-layout"
+                style={{
+                    padding: '0 50px',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    marginTop: 40
+                }}
+            >
                 <Form
                     name="basic"
                     labelCol={{ span: 8 }}
@@ -57,14 +71,24 @@ const RegisterMe: React.FC = () => {
                         <Input.Password />
                     </Form.Item>
                     <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-                        <Button type="primary" htmlType="submit" style={{ backgroundColor: '#090850', display: 'flex', justifyContent: 'center' }}>
+                        <Button
+                            type="primary"
+                            htmlType="submit"
+                            style={{
+                                backgroundColor: '#090850',
+                                display: 'flex',
+                                justifyContent: 'center'
+                            }}
+                        >
                             Register
                         </Button>
                     </Form.Item>
                 </Form>
             </Content>
             <Space direction='vertical'>
-                <Text>Already have an account?<Link href="https://ant.design" target="_blank">Login</Link></Text>
+                <Text>Already have an account?
+                    <Link href="https://ant.design" target="_blank">Login</Link>
+                </Text>
             </Space>
             <div style={{
                 marginTop: 129,
