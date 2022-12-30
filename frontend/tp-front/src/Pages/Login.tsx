@@ -4,14 +4,26 @@ import HeaderMe from '../Components/Header';
 import FooterMe from '../Components/Footer';
 import { Button, Form, Input } from 'antd';
 import { Typography } from 'antd';
+import { useNavigate} from 'react-router-dom';
+import axios from 'axios';
 
 const { Text, Link, Title } = Typography;
 
 const { Content } = Layout;
 
 const LoginMe: React.FC = () => {
+    const navigate = useNavigate();
+
     const onFinish = (values: any) => {
-        console.log('Success:', values);
+        axios.post("http://restapi.adequateshop.com/api/authaccount/login", values,)
+        .then(data => {
+            console.log('Success:', values);
+            navigate('/');   
+        })
+        .catch(error => {
+              console.log(error)
+        }) 
+
     };
 
     const onFinishFailed = (errorInfo: any) => {
@@ -51,7 +63,7 @@ const LoginMe: React.FC = () => {
                 >
                     <Form.Item
                         label="Username"
-                        name="username"
+                        name="email"
                         rules={[{ required: true, message: 'Please input your username!' }]}
                     >
                         <Input />
