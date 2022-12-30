@@ -4,7 +4,7 @@ import HeaderMe from '../Components/Header';
 import FooterMe from '../Components/Footer';
 import { Button, Form, Input } from 'antd';
 import { Typography } from 'antd';
-import { useNavigate} from 'react-router-dom';
+import { createSearchParams, useNavigate} from 'react-router-dom';
 import axios from 'axios';
 
 const { Text, Link, Title } = Typography;
@@ -12,13 +12,19 @@ const { Text, Link, Title } = Typography;
 const { Content } = Layout;
 
 const LoginMe: React.FC = () => {
+    
     const navigate = useNavigate();
 
     const onFinish = (values: any) => {
-        axios.post("http://restapi.adequateshop.com/api/authaccount/login", values,)
-        .then(data => {
-            console.log('Success:', values);
-            navigate('/');   
+        axios.post("http://restapi.adequateshop.com/api/authaccount/login", values)
+        .then(response => {
+            console.log(response);
+            navigate({
+                pathname:"/",
+                search:createSearchParams({
+                    username: values.email
+                }).toString()
+            });   
         })
         .catch(error => {
               console.log(error)
