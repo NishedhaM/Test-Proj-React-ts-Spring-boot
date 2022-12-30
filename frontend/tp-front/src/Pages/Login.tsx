@@ -5,7 +5,7 @@ import FooterMe from '../Components/Footer';
 import { Button, Form, Input } from 'antd';
 import { Typography } from 'antd';
 
-const { Text, Link,Title } = Typography;
+const { Text, Link, Title } = Typography;
 
 const { Content } = Layout;
 
@@ -21,8 +21,25 @@ const LoginMe: React.FC = () => {
     return (
         <Layout>
             <HeaderMe />
-            <Title style={{ marginTop: 100, display: 'flex', justifyContent: 'center', fontFamily: 'cursive' }}>Login Form</Title>
-            <Content className="site-layout" style={{ padding: '0 50px', display: 'flex', justifyContent: 'center', marginTop: 40 }}>
+            <Title
+                style={{
+                    marginTop: 100,
+                    display: 'flex',
+                    justifyContent: 'center',
+                    fontFamily: 'cursive'
+                }}
+            >
+                Login Form
+            </Title>
+            <Content
+                className="site-layout"
+                style={{
+                    padding: '0 50px',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    marginTop: 40
+                }}
+            >
                 <Form
                     name="basic"
                     labelCol={{ span: 8 }}
@@ -61,7 +78,9 @@ const LoginMe: React.FC = () => {
                 </Form>
             </Content>
             <Space direction='vertical'>
-                <Text>Don't you have an account?<Link href="https://ant.design" target="_blank">SignUp</Link></Text>
+                <Text>Don't you have an account?
+                    <Link href="https://ant.design" target="_blank">SignUp</Link>
+                </Text>
             </Space>
             <Space direction='vertical'>
                 <Link href="https://ant.design" target="_blank">Forgot Password?</Link>
