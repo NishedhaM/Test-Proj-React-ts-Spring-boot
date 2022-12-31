@@ -2,7 +2,6 @@ import Header from "../Components/Header";
 import { Typography } from 'antd';
 import { useSearchParams } from "react-router-dom";
 
-
 const { Title } = Typography;
 
 const Basic = () =>{
