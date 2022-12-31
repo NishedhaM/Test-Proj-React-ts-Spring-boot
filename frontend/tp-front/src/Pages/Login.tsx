@@ -4,10 +4,10 @@ import HeaderMe from '../Components/Header';
 import FooterMe from '../Components/Footer';
 import { Button, Form, Input } from 'antd';
 import { Typography } from 'antd';
-import { createSearchParams, useNavigate} from 'react-router-dom';
+import { createSearchParams, useNavigate, Link} from 'react-router-dom';
 import axios from 'axios';
 
-const { Text, Link, Title } = Typography;
+const { Text, Title } = Typography;
 
 const { Content } = Layout;
 
@@ -97,14 +97,14 @@ const LoginMe: React.FC = () => {
             </Content>
             <Space direction='vertical'>
                 <Text>Don't you have an account?
-                    <Link href="" target="_blank">SignUp</Link>
+                    <Link to={'/register'} >SignUp</Link>
                 </Text>
             </Space>
             <Space direction='vertical'>
-                <Link href="https://ant.design" target="_blank">Forgot Password?</Link>
+                <Link to={''} >Forgot Password?</Link>
             </Space>
             <div style={{
-                marginTop: 110,
+                marginTop: 113,
             }}>
                 <FooterMe />
             </div>

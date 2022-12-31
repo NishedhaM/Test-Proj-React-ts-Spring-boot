@@ -4,8 +4,9 @@ import HeaderMe from '../Components/Header';
 import FooterMe from '../Components/Footer';
 import { Button, Form, Input } from 'antd';
 import { Typography } from 'antd';
+import { Link } from 'react-router-dom';
 
-const { Text, Link, Title } = Typography;
+const { Text, Title } = Typography;
 
 const { Content } = Layout;
 
@@ -87,7 +88,7 @@ const RegisterMe: React.FC = () => {
             </Content>
             <Space direction='vertical'>
                 <Text>Already have an account?
-                    <Link href="https://ant.design" target="_blank">Login</Link>
+                    <Link to={'/login'}>Login</Link>
                 </Text>
             </Space>
             <div style={{
