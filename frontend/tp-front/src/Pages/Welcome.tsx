@@ -2,10 +2,18 @@ import { Layout, Typography } from 'antd';
 import { Button } from 'antd';
 import { Content } from 'antd/es/layout/layout';
 import background from '../Assets/welcome.jpg';
+import { useNavigate} from 'react-router-dom';
 
 const { Title } = Typography;
 
 const Welcome = () => {
+
+    const navigate = useNavigate();
+
+    const getStart = () => {
+       navigate('/login');
+      };
+
     return (
         <Layout style={{
             backgroundImage: `url(${background})`,
@@ -24,7 +32,8 @@ const Welcome = () => {
                 >
                     Welcome to SN
                 </Title>
-                <Button
+                <Button 
+                    onClick={getStart}
                     style={{
                         backgroundColor: '#090850',
                         color: 'white',

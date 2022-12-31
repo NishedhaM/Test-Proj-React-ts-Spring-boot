@@ -20,7 +20,7 @@ const LoginMe: React.FC = () => {
         .then(response => {
             console.log(response);
             navigate({
-                pathname:"/",
+                pathname:"/home",
                 search:createSearchParams({
                     username: values.email
                 }).toString()
@@ -97,7 +97,7 @@ const LoginMe: React.FC = () => {
             </Content>
             <Space direction='vertical'>
                 <Text>Don't you have an account?
-                    <Link href="https://ant.design" target="_blank">SignUp</Link>
+                    <Link href="" target="_blank">SignUp</Link>
                 </Text>
             </Space>
             <Space direction='vertical'>
