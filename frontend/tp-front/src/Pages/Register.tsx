@@ -5,6 +5,7 @@ import FooterMe from '../Components/Footer';
 import { Button, Form, Input } from 'antd';
 import { Typography } from 'antd';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 const { Text, Title } = Typography;
 
@@ -12,7 +13,17 @@ const { Content } = Layout;
 
 const RegisterMe: React.FC = () => {
     const onFinish = (values: any) => {
-        console.log('Success:', values);
+        // console.log('Success:', values);
+        axios.post('/users', {
+            name: values.username,
+            password: values.password
+          })
+          .then(function (response) {
+            console.log(response);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
     };
 
     const onFinishFailed = (errorInfo: any) => {
