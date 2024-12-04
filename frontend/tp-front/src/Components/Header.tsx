@@ -11,7 +11,7 @@ const HeaderUp: React.FC = () => {
                 mode="horizontal"
                 defaultSelectedKeys={['5']}>
                 <Menu.Item key="1" style={{ top: 5 }}><img alt='logo' src={String(SNLogo)} /></Menu.Item>
-                <Menu.Item key="2" style={{ top: 5 }}>Home</Menu.Item>
+                <Menu.Item key="2" style={{ top: 5 }}>Home1</Menu.Item>
                 <Menu.Item key="3" style={{ top: 5 }}>Contact</Menu.Item>
                 <Menu.Item key="4" style={{ top: 5 }}>About</Menu.Item>
                 <Menu.Item key="5" style={{
